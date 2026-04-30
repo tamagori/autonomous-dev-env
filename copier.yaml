@@ -1,0 +1,10 @@
+# copier.yaml
+project_name:
+  type: str
+  help: "プロジェクト名（英数字・ハイフンのみ）を入力してください:"
+  default: "autonomous-dev-env"
+
+python_version:
+  type: str
+  help: "使用するPythonのバージョンを指定してください:"
+  default: "3.12"
