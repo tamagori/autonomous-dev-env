@@ -1,0 +1,41 @@
+// .devcontainer/devcontainer.json
+{
+    "name": "Ubuntu 22.04 - Python uv (Your Project)",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    // コンテナとローカルのワークスペースをマウントする場所
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    
+    // コンテナ起動後に実行されるコマンド。uv syncで既存のlockファイルから環境を復元
+    "postCreateCommand": "uv sync",
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",        // Pythonの基本機能
+                "charliermarsh.ruff",      // Ruff (Lint/Format)
+                "tamasfe.even-better-toml",// TOMLチェック
+                "github.copilot",          // GitHub Copilot (導入済みであれば)
+                "github.copilot-chat"      // GitHub Copilot Chat (導入済みであれば)
+            ],
+            "settings": {
+                // Python関連の設定
+                "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+                
+                // RuffによるフォーマットとLintの強制
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll": "explicit",
+                        "source.organizeImports": "explicit"
+                    }
+                },
+                // その他のファイル保存時の設定
+                "editor.formatOnSave": true
+            }
+        }
+    }
+}
