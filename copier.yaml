@@ -9,13 +9,11 @@ python_version:
   help: "使用するPythonのバージョンを指定してください:"
   default: "3.12"
 
+# テンプレートの「ルート」をサブフォルダに限定する
+_subdirectory: "project_template"
+
 # プロジェクト展開時にコピー「しない」ファイルの指定
-# テンプレート用ファイルは除外する
+# プロジェクトリポジトリのビジネスロジックを上書き・削除する事故を防止するための措置
 _exclude:
-  - ".devcontainer/devcontainer.json"
-  - ".devcontainer/Dockerfile"
-  - "pyproject.toml"
   - "src/**"
   - "tests/**"
-  - "README.md"
-  - "uv.lock"

@@ -1,0 +1,39 @@
+# Pythonキャッシュ
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 仮想環境
+.venv/
+env/
+venv/
+ENV/
+
+# ツールのキャッシュ
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# 環境変数・シークレット
+.env
+.env.local
+
+# エディタ設定（DevContainersの設定は別途.devcontainerにあるため除外）
+.vscode/*
+
+# 【重要】ただし、チームで共有する設定ファイルだけは例外としてGit管理を「許可(!)」する
+!.vscode/mcp.json
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+
+# OS固有ファイル
+.DS_Store
+Thumbs.db
+
+# ビルド成果物・ログ等
+build/
+dist/
+*.egg-info/
+*.log

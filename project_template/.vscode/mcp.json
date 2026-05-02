@@ -1,0 +1,12 @@
+{
+	"servers": {
+		"my-mcp-server-40ac5da8": {
+			"type": "stdio",
+			"command": "/workspace/.venv/bin/python",
+			"args": [
+				"/workspace/tools/mcp_mock/server.py"
+			]
+		}
+	},
+	"inputs": []
+}
