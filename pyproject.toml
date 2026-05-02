@@ -1,0 +1,24 @@
+# pyproject.toml.jinja
+[project]
+name = "autonomous-dev-env"
+version = "0.1.0"
+description = "Python development environment for autonomous systems"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # 全プロジェクト共通で必ず使う分析ライブラリがあればここに記載
+    "fastapi>=0.136.1",
+    "uvicorn>=0.46.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    # 品質保障のための共通ツール群
+    "pytest>=9.0.3",
+    "ruff>=0.15.12",
+    "mcp>=1.27.0",
+    "copier>=9.0.0",
+]
+
+[tool.ruff]
+line-length = 119

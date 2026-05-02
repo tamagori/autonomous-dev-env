@@ -8,3 +8,14 @@ python_version:
   type: str
   help: "使用するPythonのバージョンを指定してください:"
   default: "3.12"
+
+# プロジェクト展開時にコピー「しない」ファイルの指定
+# テンプレート用ファイルは除外する
+_exclude:
+  - ".devcontainer/devcontainer.json"
+  - ".devcontainer/Dockerfile"
+  - "pyproject.toml"
+  - "src/**"
+  - "tests/**"
+  - "README.md"
+  - "uv.lock"
