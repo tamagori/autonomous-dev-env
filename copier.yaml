@@ -18,4 +18,4 @@ _exclude:
   - "src/**"
   - "tests/**"
 
-_answers_file: ".copier-answers.yml"
+_answers_file: "project_template/.copier-answers.yml"
