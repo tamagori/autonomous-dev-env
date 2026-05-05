@@ -17,3 +17,5 @@ _subdirectory: "project_template"
 _exclude:
   - "src/**"
   - "tests/**"
+
+_answers_file: ".copier-answers.yml"
